@@ -1,19 +1,56 @@
-1. Présentation
+# Ugreen Media Stack
 
-2. Architecture
+## Services
 
-3. Arborescence
+- Jellyfin
+- Sonarr
+- Radarr
+- Prowlarr
+- RDT-Client
+- Recyclarr
 
-4. Installation
+## Prérequis
 
-5. Variables d'environnement
+- Docker Compose
+- AllDebrid
+- Un indexeur configuré dans Prowlarr
 
-6. Premier démarrage
+## Installation
 
-7. Configuration
+git clone ...
+cp .env.example .env
+Modifier le .env
+docker compose up -d
 
-8. Sauvegarde
+## Mise à jour
 
-9. Mise à jour
+git pull
+docker compose pull
+docker compose up -d
 
-10. Dépannage
+## Sauvegarde
+
+Sauvegarder :
+- config/
+- .env
+
+Les médias et téléchargements ne font pas partie du dépôt.
+
+## Recyclarr
+
+Synchronisation manuelle :
+
+docker compose run --rm recyclarr sync
+
+Ou via une tâche planifiée du NAS.
+
+## Arborescence
+
+config/
+docs/
+
+Les médias sont stockés dans :
+/volume1/Videos
+
+Les téléchargements dans :
+/volume1/Downloads
