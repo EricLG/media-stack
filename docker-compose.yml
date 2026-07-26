@@ -101,7 +101,7 @@ services:
       - ${DOWNLOAD_ROOT}:/downloads
 
       # Scripts AV
-      - /volume1/docker/scripts:/scripts:ro
+      - /volume1/docker/infra-stack/scripts:/scripts:ro
     networks:
       - media
       - proxy-network
@@ -131,9 +131,9 @@ services:
 
       # Downloads
       - ${DOWNLOAD_ROOT}:/downloads
-      
+
       # Scripts AV
-      - /volume1/docker/scripts:/scripts:ro
+      - /volume1/docker/infra-stack/scripts:/scripts:ro
 
     networks:
       - media
