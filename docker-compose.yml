@@ -1,4 +1,4 @@
-name: ugreen-media-stack
+name: media-stack
 
 # Extensions
 x-common-env: &common-env
