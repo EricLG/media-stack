@@ -25,6 +25,9 @@ services:
   jellyfin:
     image: jellyfin/jellyfin:10.11.0
     restart: unless-stopped
+    dns:
+      - 192.168.1.17
+      - 1.1.1.1
 
     environment:
       <<: *common-env
@@ -57,6 +60,9 @@ services:
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
     restart: unless-stopped
+    dns:
+      - 192.168.1.17
+      - 1.1.1.1
 
     environment:
       <<: *common-env
@@ -81,6 +87,9 @@ services:
   sonarr:
     image: lscr.io/linuxserver/sonarr:latest
     restart: unless-stopped
+    dns:
+      - 192.168.1.17
+      - 1.1.1.1
 
     environment:
       <<: *common-env
@@ -113,6 +122,9 @@ services:
   radarr:
     image: lscr.io/linuxserver/radarr:latest
     restart: unless-stopped
+    dns:
+      - 192.168.1.17
+      - 1.1.1.1
 
     environment:
       <<: *common-env
@@ -146,6 +158,9 @@ services:
   rdtclient:
     image: rogerfar/rdtclient:latest
     restart: unless-stopped
+    dns:
+      - 192.168.1.17
+      - 1.1.1.1
 
     environment:
       <<: *common-env
@@ -169,6 +184,9 @@ services:
   # Recyclarr
   recyclarr:
     image: ghcr.io/recyclarr/recyclarr:latest
+    dns:
+      - 192.168.1.17
+      - 1.1.1.1
 
     environment:
       <<: *common-env
