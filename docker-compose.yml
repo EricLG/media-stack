@@ -162,10 +162,11 @@ services:
       - 192.168.1.17
       - 1.1.1.1
 
-    user: "${PUID}:${PGID}"
 
     environment:
       <<: *common-env
+      PUID: 911
+      PGID: 911
 
     ports:
       - "${RDTCLIENT_PORT}:6500"
