@@ -68,6 +68,7 @@ services:
       <<: *common-env
       PUID: ${PUID}
       PGID: ${PGID}
+      UMASK: "002"
 
     ports:
       - "${PROWLARR_PORT}:9696"
@@ -95,6 +96,7 @@ services:
       <<: *common-env
       PUID: ${PUID}
       PGID: ${PGID}
+      UMASK: "002"
 
     ports:
       - "${SONARR_PORT}:8989"
@@ -130,6 +132,7 @@ services:
       <<: *common-env
       PUID: ${PUID}
       PGID: ${PGID}
+      UMASK: "002"
 
     ports:
       - "${RADARR_PORT}:7878"
@@ -165,8 +168,9 @@ services:
 
     environment:
       <<: *common-env
-      PUID: 911
-      PGID: 911
+      PUID: ${PUID}
+      PGID: ${PGID}
+      UMASK: "002"
 
     ports:
       - "${RDTCLIENT_PORT}:6500"
