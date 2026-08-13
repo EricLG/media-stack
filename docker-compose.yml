@@ -40,7 +40,7 @@ services:
       - ${DOCKER_ROOT}/config/jellyfin:/config
 
       # Media library
-      - ${MEDIA_ROOT}:/media:ro
+      - ${MEDIA_ROOT}:/media:rw
 
       # Transcoding cache
       - ${DOCKER_ROOT}/config/jellyfin/cache:/cache
